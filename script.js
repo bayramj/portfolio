@@ -42,11 +42,16 @@ if ('IntersectionObserver' in window) {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  }, { threshold: 0, rootMargin: '0px 0px 15% 0px' }); // start just before elements scroll into view
+
+  // Stagger side-by-side cards on wide screens only; on phones everything is stacked
+  const stagger = window.matchMedia('(min-width: 761px)').matches;
 
   document.querySelectorAll('.reveal').forEach((el) => {
-    const siblings = [...el.parentElement.children].filter((child) => child.classList.contains('reveal'));
-    el.style.setProperty('--reveal-delay', `${Math.min(siblings.indexOf(el), 4) * 90}ms`);
+    if (stagger) {
+      const siblings = [...el.parentElement.children].filter((child) => child.classList.contains('reveal'));
+      el.style.setProperty('--reveal-delay', `${Math.min(siblings.indexOf(el), 3) * 70}ms`);
+    }
     observer.observe(el);
   });
 
