@@ -4,191 +4,279 @@
 <head>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Julian | Marketing Operations &amp; Automation</title>
 	<meta name="description"
-		content="Julian Bayram — Marketing Operations & Automation. HubSpot CRM, Klaviyo, Shopify, Python scripting, and the systems that connect them." />
-	<meta name="theme-color" content="#111827" />
-	<title>Julian Bayram | Marketing Operations</title>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+		content="Marketing operations and automation portfolio: HubSpot CRM, Klaviyo, Shopify, GA4/GTM, and Python tooling that connects them. Based in Washington, DC." />
+	<meta name="robots" content="index, follow" />
+	<link rel="canonical" href="https://jbayram.com/" />
+	<meta name="theme-color" content="#0b0d12" />
+	<meta name="color-scheme" content="dark" />
+
+	<!-- Social previews -->
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content="Julian — Marketing Ops" />
+	<meta property="og:title" content="Julian | Marketing Operations &amp; Automation" />
+	<meta property="og:description"
+		content="CRM, email automation, e-commerce ops, and Python tooling for lean marketing teams." />
+	<meta property="og:url" content="https://jbayram.com/" />
+	<meta property="og:image" content="https://jbayram.com/og-image.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:alt" content="Marketing Operations &amp; Automation portfolio" />
+	<meta name="twitter:card" content="summary_large_image" />
+
+	<!-- Self-hosted fonts: no third-party requests -->
+	<link rel="preload" href="fonts/inter-var-latin.woff2" as="font" type="font/woff2" crossorigin />
 	<link rel="stylesheet" href="styles.css" />
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
+
+	<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+	<link rel="icon" href="favicon.ico" sizes="32x32" />
+	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+	<link rel="manifest" href="site.webmanifest" />
+
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "ProfilePage",
+		"url": "https://jbayram.com/",
+		"mainEntity": {
+			"@type": "Person",
+			"name": "Julian",
+			"jobTitle": "Marketing Operations & Automation",
+			"knowsAbout": ["HubSpot CRM", "Klaviyo", "Shopify", "Liquid", "GA4", "Google Tag Manager", "Python", "Marketing Automation", "SEO"],
+			"sameAs": ["https://github.com/bayramj"]
+		}
+	}
+	</script>
+
+	<!-- Reveal animations only apply when JavaScript (and IntersectionObserver) is available -->
+	<script>if ('IntersectionObserver' in window) document.documentElement.classList.add('js');</script>
 </head>
 
 <body>
 	<a class="skip-link" href="#main">Skip to content</a>
 
 	<header class="site-header" data-header>
-		<a class="brand" href="#home" aria-label="Julian Bayram home">
-			<span class="brand-mark">JB</span>
-			<span>Julian Bayram</span>
-		</a>
-		<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-			<span class="sr-only">Toggle navigation</span>
-			<span></span><span></span><span></span>
-		</button>
-		<nav id="site-nav" class="site-nav" aria-label="Main navigation">
-			<a href="#work">Work</a>
-			<a href="#about">About</a>
-			<a href="#capabilities">Capabilities</a>
-			<a href="#contact">Contact</a>
-		</nav>
+		<div class="header-inner">
+			<a class="brand" href="#home" aria-label="Home">
+				<span class="brand-mark" aria-hidden="true">J</span>
+				<span class="brand-name">Julian<span class="brand-dot">.</span></span>
+			</a>
+			<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="nav-toggle-bar" aria-hidden="true"></span>
+				<span class="nav-toggle-bar" aria-hidden="true"></span>
+			</button>
+			<nav id="site-nav" class="site-nav" aria-label="Main navigation">
+				<a href="#work">Work</a>
+				<a href="#about">About</a>
+				<a href="#capabilities">Capabilities</a>
+				<a class="nav-cta" href="#contact">Contact</a>
+			</nav>
+		</div>
 	</header>
 
 	<main id="main">
 
 		<!-- Hero -->
-		<section id="home" class="hero section">
-			<div class="hero-copy reveal">
-				<h1>Julian Bayram</h1>
-				<p class="hero-role">Marketing Operations &mdash; Washington, DC</p>
-				<p class="hero-lede">CS background, currently working in marketing ops. I manage CRM systems, email
-					automation, and e-commerce operations day to day — and build Python tooling when the right
+		<section id="home" class="hero section" aria-labelledby="hero-title">
+			<div class="hero-glow" aria-hidden="true"></div>
+			<div class="hero-copy">
+				<p class="hero-kicker reveal">
+					<span class="status-dot" aria-hidden="true"></span>
+					Hi, I'm Julian &middot; Marketing Operations
+				</p>
+				<h1 id="hero-title" class="reveal">Marketing systems that <span class="gradient-text">actually run.</span></h1>
+				<p class="hero-lede reveal">CS background, currently working in marketing ops. I manage CRM systems, email
+					automation, and e-commerce operations day to day &mdash; and build Python tooling when the right
 					solution doesn't exist yet.</p>
-				<div class="hero-actions">
-					<a class="button primary" href="#work">View my work</a>
-					<a class="button" href="#contact">Get in touch</a>
+				<div class="hero-actions reveal">
+					<a class="button primary" href="#work">View my work <span aria-hidden="true">&rarr;</span></a>
+					<a class="button ghost" href="#contact">Get in touch</a>
 				</div>
 			</div>
 			<div class="tool-strip reveal">
-				<span>HubSpot</span>
-				<span>Klaviyo</span>
-				<span>Shopify / Liquid</span>
-				<span>GA4 / GTM</span>
-				<span>Python</span>
-				<span>Workflow Automation</span>
-				<span>SEO</span>
+				<p class="tool-strip-label" id="stack-label">Daily stack</p>
+				<ul aria-labelledby="stack-label">
+					<li>HubSpot</li>
+					<li>Klaviyo</li>
+					<li>Shopify / Liquid</li>
+					<li>GA4 / GTM</li>
+					<li>Python</li>
+					<li>Workflow Automation</li>
+					<li>SEO</li>
+				</ul>
 			</div>
 		</section>
 
 		<!-- Work -->
-		<section id="work" class="section work-heading">
-			<div class="reveal">
-				<p class="eyebrow">Selected work</p>
-				<h2>Projects and contributions.</h2>
+		<section id="work" class="section" aria-labelledby="work-title">
+			<header class="section-head reveal">
+				<p class="eyebrow"><span class="eyebrow-num">01</span> Selected work</p>
+				<h2 id="work-title">Projects and contributions.</h2>
 				<p class="section-lede">A mix of professional work and personal projects across marketing ops,
 					automation, and e-commerce operations.</p>
-			</div>
-		</section>
+			</header>
 
-		<section class="project-grid" aria-label="Project cards">
-			<article class="project-card reveal">
-				<div class="project-visual gradient-a"><span>01</span></div>
-				<div class="project-content">
-					<p class="project-type">Automation / Python</p>
-					<h3>Resume Tailoring Pipeline</h3>
-					<p>Built a Python-based system that scrapes job postings via jobspy, scores them with an LLM, and
-						auto-tailors a resume per role — handling archetype detection, skills deduplication, and PDF
-						generation end to end.</p>
-					<ul class="tag-list">
-						<li>Python</li>
-						<li>Gemini API</li>
-						<li>PDF Generation</li>
-						<li>CLI tooling</li>
-					</ul>
-				</div>
-			</article>
-			<article class="project-card reveal">
-				<div class="project-visual gradient-b"><span>02</span></div>
-				<div class="project-content">
-					<p class="project-type">E-commerce / Marketing</p>
-					<h3>High Falls Hemp NY — Full-Stack Ops</h3>
-					<p>Manage end-to-end marketing and e-commerce operations: Shopify administration, Klaviyo email
-						flows, GA4/GTM tracking, SEO content strategy, and customer support automation across
-						channels.</p>
-					<ul class="tag-list">
-						<li>Shopify</li>
-						<li>Klaviyo</li>
-						<li>GA4 / GTM</li>
-						<li>Liquid</li>
-					</ul>
-				</div>
-			</article>
-			<article class="project-card reveal">
-				<div class="project-visual gradient-c"><span>03</span></div>
-				<div class="project-content">
-					<p class="project-type">CRM / Ops</p>
-					<h3>HubSpot CRM Administration</h3>
-					<p>Built and maintain CRM workflows, contact lifecycle automation, cross-platform integrations, and
-						marketing attribution reporting for a small-business environment with multiple operational
-						touchpoints.</p>
-					<ul class="tag-list">
-						<li>HubSpot</li>
-						<li>Workflow automation</li>
-						<li>Integrations</li>
-						<li>Reporting</li>
-					</ul>
-				</div>
-			</article>
+			<div class="project-grid">
+				<article class="project-card hue-violet reveal">
+					<div class="project-visual" aria-hidden="true">
+						<span class="project-index">01</span>
+						<svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+							stroke-linecap="round" stroke-linejoin="round">
+							<polyline points="16 18 22 12 16 6" />
+							<polyline points="8 6 2 12 8 18" />
+						</svg>
+					</div>
+					<div class="project-content">
+						<p class="project-type">Automation / Python</p>
+						<h3>Resume Tailoring Pipeline</h3>
+						<p>Built a Python-based system that scrapes job postings via jobspy, scores them with an LLM, and
+							auto-tailors a resume per role &mdash; handling archetype detection, skills deduplication,
+							and PDF generation end to end.</p>
+						<ul class="tag-list">
+							<li>Python</li>
+							<li>Gemini API</li>
+							<li>PDF Generation</li>
+							<li>CLI tooling</li>
+						</ul>
+					</div>
+				</article>
+				<article class="project-card hue-green reveal">
+					<div class="project-visual" aria-hidden="true">
+						<span class="project-index">02</span>
+						<svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+							stroke-linecap="round" stroke-linejoin="round">
+							<circle cx="9" cy="21" r="1" />
+							<circle cx="20" cy="21" r="1" />
+							<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+						</svg>
+					</div>
+					<div class="project-content">
+						<p class="project-type">E-commerce / Marketing</p>
+						<h3>DTC Wellness Brand &mdash; Full-Stack Ops</h3>
+						<p>Manage end-to-end marketing and e-commerce operations for a New York&ndash;based direct-to-consumer
+							brand: Shopify administration, Klaviyo email flows, GA4/GTM tracking, SEO content strategy,
+							and customer support automation across channels.</p>
+						<ul class="tag-list">
+							<li>Shopify</li>
+							<li>Klaviyo</li>
+							<li>GA4 / GTM</li>
+							<li>Liquid</li>
+						</ul>
+					</div>
+				</article>
+				<article class="project-card hue-amber reveal">
+					<div class="project-visual" aria-hidden="true">
+						<span class="project-index">03</span>
+						<svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+							stroke-linecap="round" stroke-linejoin="round">
+							<circle cx="18" cy="5" r="3" />
+							<circle cx="6" cy="12" r="3" />
+							<circle cx="18" cy="19" r="3" />
+							<line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+							<line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+						</svg>
+					</div>
+					<div class="project-content">
+						<p class="project-type">CRM / Ops</p>
+						<h3>HubSpot CRM Administration</h3>
+						<p>Built and maintain CRM workflows, contact lifecycle automation, cross-platform integrations,
+							and marketing attribution reporting for a small-business environment with multiple
+							operational touchpoints.</p>
+						<ul class="tag-list">
+							<li>HubSpot</li>
+							<li>Workflow automation</li>
+							<li>Integrations</li>
+							<li>Reporting</li>
+						</ul>
+					</div>
+				</article>
+			</div>
 		</section>
 
 		<!-- About -->
-		<section id="about" class="section about">
-			<div class="about-facts reveal">
-				<p class="eyebrow">Background</p>
-				<ul class="fact-list">
-					<li>
-						<strong>Education</strong>
-						<span>B.S. Computer & Information Science, Fordham University</span>
-					</li>
-					<li>
-						<strong>Location</strong>
-						<span>Washington, DC</span>
-					</li>
-					<li>
-						<strong>Currently</strong>
-						<span>Marketing Technology, High Falls Enterprises</span>
-					</li>
-					<li>
-						<strong>Open to</strong>
-						<span>Marketing ops, CRM specialist, and martech IC roles</span>
-					</li>
+		<section id="about" class="section about" aria-labelledby="about-title">
+			<div class="about-copy reveal">
+				<p class="eyebrow"><span class="eyebrow-num">02</span> Background</p>
+				<h2 id="about-title">Computer science background, marketing operations focus.</h2>
+				<p>My career has been at the intersection of marketing and technology &mdash; building the systems and
+					automations that make marketing actually executable at scale, even in lean teams.</p>
+				<p>I currently manage marketing technology operations for a small group of consumer brands, covering CRM
+					administration, email automation, Shopify store management, SEO, and customer support workflows.
+					I also build personal tooling in Python when the right solution doesn't exist yet.</p>
+				<ul class="skill-cloud">
+					<li>HubSpot CRM</li>
+					<li>Klaviyo</li>
+					<li>Shopify / Liquid</li>
+					<li>GA4 / GTM</li>
+					<li>Python</li>
+					<li>Marketing Automation</li>
+					<li>Email Marketing</li>
+					<li>SEO</li>
+					<li>Workflow Design</li>
+					<li>Data Management</li>
 				</ul>
 			</div>
-			<div class="about-copy reveal">
-				<h2>Computer science background, marketing operations focus.</h2>
-				<p>My career has been at the intersection of marketing and technology — building the systems and
-					automations that make marketing actually executable at scale, even in lean teams.</p>
-				<p>I currently manage marketing technology operations for High Falls Enterprises and High Falls Hemp NY,
-					covering CRM administration, email automation, Shopify store management, SEO, and customer support
-					workflows. I also build personal tooling in Python when the right solution doesn't exist yet.</p>
-				<div class="skill-cloud" aria-label="Skills">
-					<span>HubSpot CRM</span>
-					<span>Klaviyo</span>
-					<span>Shopify / Liquid</span>
-					<span>GA4 / GTM</span>
-					<span>Python</span>
-					<span>Marketing Automation</span>
-					<span>Email Marketing</span>
-					<span>SEO</span>
-					<span>Workflow Design</span>
-					<span>Data Management</span>
-				</div>
-			</div>
+			<aside class="about-facts reveal" aria-label="Quick facts">
+				<dl class="fact-list">
+					<div>
+						<dt>Education</dt>
+						<dd>B.S. Computer &amp; Information Science</dd>
+					</div>
+					<div>
+						<dt>Location</dt>
+						<dd>Washington, DC area</dd>
+					</div>
+					<div>
+						<dt>Currently</dt>
+						<dd>Marketing Technology, consumer brands</dd>
+					</div>
+					<div>
+						<dt>Open to</dt>
+						<dd>Marketing ops, CRM specialist, and martech IC roles</dd>
+					</div>
+				</dl>
+			</aside>
 		</section>
 
 		<!-- Capabilities -->
-		<section id="capabilities" class="section capabilities">
-			<div class="reveal">
-				<p class="eyebrow">Capabilities</p>
-				<h2>What I can help with.</h2>
-			</div>
+		<section id="capabilities" class="section" aria-labelledby="capabilities-title">
+			<header class="section-head reveal">
+				<p class="eyebrow"><span class="eyebrow-num">03</span> Capabilities</p>
+				<h2 id="capabilities-title">What I can help with.</h2>
+			</header>
 			<div class="service-list">
 				<article class="service reveal">
-					<h3>CRM & Marketing Automation</h3>
+					<svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+						stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+						<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+						<circle cx="9" cy="7" r="4" />
+						<path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+						<path d="M16 3.13a4 4 0 0 1 0 7.75" />
+					</svg>
+					<h3>CRM &amp; Marketing Automation</h3>
 					<p>HubSpot administration, Klaviyo flows, lifecycle segmentation, cross-platform integrations, and
 						keeping contact data clean and actionable.</p>
 				</article>
 				<article class="service reveal">
-					<h3>E-commerce & Shopify Ops</h3>
+					<svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+						stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+						<path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+						<line x1="3" y1="6" x2="21" y2="6" />
+						<path d="M16 10a4 4 0 0 1-8 0" />
+					</svg>
+					<h3>E-commerce &amp; Shopify Ops</h3>
 					<p>Shopify store management, Liquid customization, product catalog operations, GA4 and GTM
 						implementation, and SEO content strategy for DTC brands.</p>
 				</article>
 				<article class="service reveal">
-					<h3>Python Scripting & Tooling</h3>
+					<svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"
+						stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+						<polyline points="4 17 10 11 4 5" />
+						<line x1="12" y1="19" x2="20" y2="19" />
+					</svg>
+					<h3>Python Scripting &amp; Tooling</h3>
 					<p>Custom automation scripts, data processing pipelines, API integrations, and CLI tools that
 						eliminate repetitive manual work across marketing and operational workflows.</p>
 				</article>
@@ -196,26 +284,30 @@
 		</section>
 
 		<!-- Contact -->
-		<section id="contact" class="section contact reveal">
-			<p class="eyebrow">Contact</p>
-			<h2>Have a role, project, or collaboration in mind?</h2>
-			<p>Reach out with context on what you're working on and what you need.</p>
-			<div class="contact-actions">
-				<a class="button primary" href="mailto:julianbayram98@gmail.com">julianbayram98@gmail.com</a>
-				<a class="button" href="https://github.com/bayramj" target="_blank" rel="noreferrer">GitHub</a>
-				<a class="button" href="https://www.linkedin.com/in/julianbayram" target="_blank"
-					rel="noreferrer">LinkedIn</a>
+		<section id="contact" class="section" aria-labelledby="contact-title">
+			<div class="contact reveal">
+				<p class="eyebrow"><span class="eyebrow-num">04</span> Contact</p>
+				<h2 id="contact-title">Have a role, project, or collaboration in mind?</h2>
+				<p>Reach out with context on what you're working on and what you need.</p>
+				<div class="contact-actions">
+					<a class="button primary" href="https://github.com/bayramj" target="_blank" rel="noopener noreferrer">
+						<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+							<path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z" />
+						</svg>
+						GitHub
+					</a>
+				</div>
 			</div>
 		</section>
 
 	</main>
 
 	<footer class="site-footer">
-		<p>&copy; <span data-year></span> Julian Bayram.</p>
-		<a href="#home">Back to top &uarr;</a>
+		<p>&copy; <span data-year>2026</span> Julian. Built by hand &mdash; no trackers, no cookies.</p>
+		<a href="#home">Back to top <span aria-hidden="true">&uarr;</span></a>
 	</footer>
 
-	<script src="script.js"></script>
+	<script src="script.js" defer></script>
 </body>
 
 </html>
