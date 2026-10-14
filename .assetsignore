@@ -1,0 +1,14 @@
+# Files in the repo that should not be published to the website
+.git
+.github
+node_modules
+wrangler.jsonc
+.assetsignore
+README.md
+
+# Unused leftovers from the original site template
+assets
+images
+README.txt
+LICENSE.txt
+about.txt
