@@ -70,8 +70,11 @@ body {
 /* Subtle dot grid texture */
 body::before {
     content: "";
-    position: fixed;
-    inset: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120vh;
     z-index: -1;
     pointer-events: none;
     background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
@@ -375,22 +378,11 @@ h3 {
     right: -10%;
     width: min(42rem, 80vw);
     aspect-ratio: 1;
-    border-radius: 50%;
-    background: conic-gradient(from 180deg, rgba(139, 123, 255, .35), rgba(61, 214, 198, .25), rgba(255, 179, 92, .15), rgba(139, 123, 255, .35));
-    filter: blur(90px);
-    opacity: .55;
-    animation: drift 18s ease-in-out infinite alternate;
+    background:
+        radial-gradient(closest-side at 40% 40%, rgba(139, 123, 255, .22), transparent),
+        radial-gradient(closest-side at 65% 60%, rgba(61, 214, 198, .14), transparent),
+        radial-gradient(closest-side at 50% 80%, rgba(255, 179, 92, .07), transparent);
     pointer-events: none;
-}
-
-@keyframes drift {
-    0% {
-        transform: translate(0, 0) rotate(0deg) scale(1);
-    }
-
-    100% {
-        transform: translate(-8%, 6%) rotate(40deg) scale(1.1);
-    }
 }
 
 .hero-copy {
@@ -853,11 +845,36 @@ h3 {
     color: var(--text);
 }
 
+/* ── Hero intro (pure CSS, plays on load without waiting for JS) ── */
+.intro {
+    animation: intro .6s var(--ease) both;
+}
+
+.hero-copy > .intro:nth-child(2) {
+    animation-delay: 60ms;
+}
+
+.hero-copy > .intro:nth-child(3) {
+    animation-delay: 120ms;
+}
+
+.hero-copy > .intro:nth-child(4),
+.tool-strip.intro {
+    animation-delay: 180ms;
+}
+
+@keyframes intro {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
 /* ── Scroll reveal (only hides content once JS confirms it can reveal it) ── */
 .js .reveal {
     opacity: 0;
-    transform: translateY(20px);
-    transition: opacity .8s var(--ease), transform .8s var(--ease);
+    transform: translateY(12px);
+    transition: opacity .5s var(--ease), transform .5s var(--ease);
     transition-delay: var(--reveal-delay, 0ms);
 }
 
@@ -898,6 +915,13 @@ h3 {
     .header-inner {
         flex-wrap: wrap;
         border-radius: 22px;
+    }
+
+    .site-header.is-scrolled .header-inner,
+    .site-header.menu-open .header-inner {
+        background: rgba(13, 15, 21, 0.96);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
     }
 
     .site-nav {
